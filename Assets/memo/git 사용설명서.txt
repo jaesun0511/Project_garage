@@ -1,0 +1,23 @@
+<git 사용설명서>
+
+# 1. main 브랜치 최신화
+git checkout main
+git pull origin main
+
+# 2. test1 브랜치로 이동 후 최신화
+git checkout test1
+git pull origin test1
+
+# test1 상태에서 실행
+git add .
+git commit -m "작업 내용 설명 (예: 전투 이동 로직 추가)"
+git push origin test1
+
+# 1. main 브랜치로 이동
+git checkout main
+
+# 2. test1의 내용을 main으로 병합(합치기)
+git merge test1
+
+# 3. 합쳐진 최신 main의 내용을 깃허브 서버에 푸시
+git push origin main
