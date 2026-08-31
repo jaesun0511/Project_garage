@@ -21,3 +21,8 @@ git merge test1
 
 # 3. 합쳐진 최신 main의 내용을 깃허브 서버에 푸시
 git push origin main
+
+
+==============================
+# 브랜치 삭제
+git branch -d 브랜치명

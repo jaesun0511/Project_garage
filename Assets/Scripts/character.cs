@@ -6,8 +6,8 @@ using UnityEngine;
 /// - currentHp: current HP (initialized to maxHp)
 /// - teamId: team identifier used for ally/enemy checks
 /// </summary>
-[DisallowMultipleComponent]
-public class Character : MonoBehaviour, IDamageable
+[DisallowMultipleComponent] //한 오브젝트에 Character 컴포넌트가 여러 개 붙는 것을 방지합니다.
+public class Character : MonoBehaviour, IDamageable // IDamageable 인터페이스를 구현합니다.
 {
     [Header("Stats")]
     public float maxHp = 100f;
@@ -44,4 +44,6 @@ public class Character : MonoBehaviour, IDamageable
         Debug.LogFormat("{0} (Team {1}) died.", name, teamId);
         Destroy(gameObject);
     }
+
+    
 }
